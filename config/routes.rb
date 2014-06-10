@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pages
+
   #get 'render_site/index'
 	get '/sites/:id', to: 'render_site#index'
 

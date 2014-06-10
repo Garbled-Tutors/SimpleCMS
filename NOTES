@@ -57,5 +57,6 @@ Page
 id
 page_url
 page_title
+page_content - Forgot to add this, obviously we need a field for the page content
 
 Images, css, and javascript will be placed in the public directory for the moment
