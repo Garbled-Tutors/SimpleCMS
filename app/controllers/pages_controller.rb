@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-	http_basic_authenticate_with :name => "admin", :password => "password"
   before_action :set_page, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user
 
   # GET /pages
   # GET /pages.json
@@ -63,6 +63,12 @@ class PagesController < ApplicationController
   end
 
   private
+		def authenticate_user
+			authenticate_or_request_with_http_digest do |username|
+				User.authenticate username
+			end
+		end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_page
       @page = Page.find(params[:id])
