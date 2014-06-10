@@ -1,0 +1,61 @@
+Databases
+
+
+Goal. The database will likely look like this in the future. This is all tenative
+*********************************************************************************
+
+					Website
+
+id
+site_name - Name of website
+title_prefix - The title of every page will be preceded by this string
+template_id - Reference to the current template id
+
+					Website Template
+
+id
+content_tag - This will identify the content type. The value will not be important, but it must be unique to the website
+								Some examples will be head1, keywords, head2, description, head3, bodystart, content, bodyend
+								When the website is generated it will look for a blob with a matching content_tag, and website_id. If
+								there are multiple matches then it will look for one with the correct page_id.
+								head1 in this example will contain a single blob entry for the entire website, but content would have
+								one seperate blob for each page
+weight - This will be used to determine which piece of content should be in which order. The lower the weight the higher
+								it will appear on the website
+
+					Page
+
+id
+title - The title of the page. It will be preceded by title_prefix from website
+
+					Blob
+
+id
+content_tag - This identifies where the blob should appear on the website. See Website Template content_tag
+website_id - Identifies which website this blob is attached to
+page_id - This can be null in the event the blob is on every page, or at least most pages. If it is null then it
+								will be the default blob.
+content - Actual content, this will a large amount of text usually
+
+Image database names not yet determined
+
+
+
+****************************************************************************************
+Next Version Goal
+
+
+Website
+
+id
+site_name
+top_content - This will preceed page_content
+bottom_content - This will follow page_content
+
+Page
+
+id
+page_url
+page_title
+
+Images, css, and javascript will be placed in the public directory for the moment
