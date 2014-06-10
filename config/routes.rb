@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   #get 'render_site/index'
 	get '/sites/:id', to: 'render_site#index'
+	get '/sites/:website_id/:page_url', to: 'render_site#index'
 
   resources :websites
 
