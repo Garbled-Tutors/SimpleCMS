@@ -42,7 +42,7 @@ Image database names not yet determined
 
 
 ****************************************************************************************
-Next Version Goal
+Current Database Structure
 
 
 Website
@@ -60,3 +60,12 @@ page_title
 page_content - Forgot to add this, obviously we need a field for the page content
 
 Images, css, and javascript will be placed in the public directory for the moment
+
+
+*****************************************************************************************
+Next Version Goal
+
+Database user authentication.
+Currently using this guide
+http://railscasts.com/episodes/270-authentication-in-rails-3-1?view=asciicast
+
