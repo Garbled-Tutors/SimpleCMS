@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #get 'render_site/index'
+	get '/sites/:id', to: 'render_site#index'
+
   resources :websites
 
   # The priority is based upon order of creation: first created -> highest priority.

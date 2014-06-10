@@ -1,0 +1,2 @@
+module RenderSiteHelper
+end
