@@ -1,4 +1,5 @@
 class WebsitesController < ApplicationController
+	http_basic_authenticate_with :name => "admin", :password => "password"
   before_action :set_website, only: [:show, :edit, :update, :destroy]
 
   # GET /websites
